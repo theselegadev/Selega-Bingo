@@ -1,6 +1,9 @@
 import generate_bingo from "./module.js";
+import { constructor_table } from "./module.js";
+
 const btn_play = document.getElementById('buttonplay')
 const table = document.getElementById('table')
+const list_line = document.querySelectorAll('.line')
 
 class Bingo{
     constructor(b,i,n,g,o){
@@ -32,3 +35,13 @@ window.addEventListener('DOMContentLoaded',()=>{
         table.style.display = 'block'
     }
 })
+
+const bingo = JSON.parse(localStorage.getItem('Bingo'))
+
+constructor_table(list_line,bingo.b)
+constructor_table(list_line,bingo.i)
+constructor_table(list_line,bingo.n)
+constructor_table(list_line,bingo.g)
+constructor_table(list_line,bingo.o)
+
+
