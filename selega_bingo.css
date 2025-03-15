@@ -1,0 +1,86 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(40deg, rgba(12, 97, 136, 0.678), rgba(22, 172, 218, 0.699));
+    color: white;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.226);
+    padding: 5px;
+}
+.card-instruction{
+    font-size: larger;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 600px;
+    height: 150px;
+    background-color: white;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.377));
+    transition: all 700ms ease-in-out;
+    z-index: 4;
+}
+.card-instruction .box-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 10%;
+}
+.card-instruction .box-top button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: large;
+    background-color: rgb(213, 229, 245);
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.247));
+    cursor: pointer;
+}
+.card-instruction .box-bottom{
+    height: 80%;
+    width: 80%;
+}
+.card-instruction .box-bottom .box-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.box-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-instruction{
+    width: 110px;
+    height: 30px;
+    font-size: medium;
+    font-size: large;
+    background-image: linear-gradient(75deg, rgb(207, 206, 206), rgb(211, 208, 208));
+    border-radius: 5px;
+    box-shadow: 0px 5px gray;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
