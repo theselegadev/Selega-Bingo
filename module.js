@@ -18,3 +18,10 @@ export default function generate_bingo(init,end){
     return array
 }
 
+function constructor_table(list){
+    list.forEach(item =>{
+        for(let i = 0; i < 5; i++){
+            item.innerHTML += '<td></td>'
+        }
+    })
+}

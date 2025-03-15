@@ -96,3 +96,33 @@ header{
     cursor: pointer;
     transition: all 500ms ease-in-out;
 }
+.buttonplay{
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    cursor: pointer;
+    transition: all 500ms ease-in-out
+}
+.container-bingo{
+    display: none;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+table, th, td {
+    font-size: xx-large;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+}
