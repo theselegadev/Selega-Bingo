@@ -23,3 +23,20 @@ export function constructor_table(list,array){
         list[i].innerHTML += `<td>${array[i]}</td>`
     }
 }
+
+export function draw_number(){
+    const list = [0]
+    let num = 0
+
+    for(let k = 0; k < 75; k++){
+        for(let i = 0; i<list.length;i++){
+            if(num == list[i]){
+                i = 0;
+                num = Math.floor(Math.random() * (75 - 1 + 1)) + 1
+            }   
+        }
+        list.push(num)
+    }
+
+    return list
+}
