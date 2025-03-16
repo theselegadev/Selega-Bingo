@@ -20,7 +20,7 @@ export default function generate_bingo(init,end){
 
 export function constructor_table(list,array){
     for(let i = 0; i < 5; i++){
-        list[i].innerHTML += `<td>${array[i]}</td>`
+        list[i].innerHTML += `<td id="num">${array[i]}</td>`
     }
 }
 
@@ -38,5 +38,19 @@ export function draw_number(){
         list.push(num)
     }
 
-    return list
+    return {list: list}
+}
+
+export function markup_number(list){
+    list.forEach(item => {
+        item.addEventListener('click',()=>{
+            if(!item.classList.contains('markup')){
+                item.classList.add('markup')
+            }else{
+                if(confirm("Deseja desmarcar?")){
+                    item.classList.remove('markup')
+                }
+            }
+        })
+    });
 }
