@@ -68,3 +68,9 @@ export function update_table(nodelist,classlist){
         }
     })
 }
+
+export function list_numbers(list,end,container){
+    for(let i = 1; i<end; i++){
+        container.innerHTML += `<p>${list[i]}, </p>`
+    }
+}

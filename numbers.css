@@ -21,7 +21,7 @@ header{
 }
 section{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
     width: 100%;
@@ -50,4 +50,13 @@ section{
 }
 .show{
     font-size: 3rem;
+}
+#container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 2rem;
 }
