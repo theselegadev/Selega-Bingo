@@ -1,9 +1,14 @@
 const btn_draw = document.getElementById('btn-draw')
 const list = JSON.parse(localStorage.getItem('list'))
 const show = document.getElementById('show')
-let index = 1
+let index = localStorage.getItem('positionnumber')
 
 btn_draw.addEventListener('click',()=>{
-    show.innerText = `${list.list[index]}`
     index++
+    localStorage.setItem('positionnumber',index)
+    show.innerText = `${list.list[index]}`
+})
+
+window.addEventListener('DOMContentLoaded',()=>{
+    show.innerText = `${list.list[index]}`
 })
