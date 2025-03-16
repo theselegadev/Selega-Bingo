@@ -1,9 +1,10 @@
-import generate_bingo, { draw_number, markup_number } from "./module.js";
+import generate_bingo, { draw_number, markup_number, update_table } from "./module.js";
 import { constructor_table } from "./module.js";
 
 const btn_play = document.getElementById('buttonplay')
 const table = document.getElementById('table')
 const list_line = document.querySelectorAll('.line')
+let list_num
 
 class Bingo{
     constructor(b,i,n,g,o){
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         MyBingo.save()
 
         localStorage.setItem('list',JSON.stringify(draw_number()))
+        localStorage.setItem("positionnumber",0)
 
     }else{
         btn_play.style.display = 'none'
@@ -46,11 +48,12 @@ window.addEventListener('DOMContentLoaded',()=>{
     constructor_table(list_line,bingo.g)
     constructor_table(list_line,bingo.o)
 
-    const list_num = document.querySelectorAll('#num')
-    console.log(list_num)
-
+    list_num = document.querySelectorAll('#num')
     markup_number(list_num)
+    update_table(list_num,JSON.parse(localStorage.getItem('listnumbers')))
 })
+
+
 
 
 

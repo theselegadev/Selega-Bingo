@@ -41,7 +41,12 @@ export function draw_number(){
     return {list: list}
 }
 
-export function markup_number(list){
+function save_list(list){
+    list = Array.from(list).map(el => el.className)
+    localStorage.setItem('listnumbers',JSON.stringify(list))
+}
+
+export function markup_number(list){    
     list.forEach(item => {
         item.addEventListener('click',()=>{
             if(!item.classList.contains('markup')){
@@ -51,6 +56,15 @@ export function markup_number(list){
                     item.classList.remove('markup')
                 }
             }
+            save_list(list)
         })
     });
+}
+
+export function update_table(nodelist,classlist){
+    nodelist.forEach((item,index) => {
+        if(classlist[index] != ""){
+            item.classList.add(classlist[index])
+        }
+    })
 }
