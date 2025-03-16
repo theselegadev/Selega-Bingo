@@ -5,6 +5,7 @@
     box-sizing: border-box;
     border: none;
     outline: none;
+    text-decoration: none;
 }
 body{
     min-height: 100%;
@@ -35,7 +36,9 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 40px;
+    gap: 25px;
 }
 .btn-draw{
     border-radius: 5px;
@@ -59,4 +62,83 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 2rem;
+}
+.close{
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+    font-size: large;
+    background-image: linear-gradient(75deg, rgb(207, 206, 206), rgb(211, 208, 208));
+    border-radius: 5px;
+    box-shadow: 0px 5px gray;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.card-close{
+    font-size: larger;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 600px;
+    height: 150px;
+    background-color: white;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.377));
+    transition: all 700ms ease-in-out;
+    z-index: 4;
+}
+.card-close .box-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 10%;
+}
+.card-close .box-top button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: large;
+    background-color: rgb(213, 229, 245);
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.247));
+    cursor: pointer;
+}
+.card-close .box-bottom{
+    height: 80%;
+    width: 80%;
+}
+.card-close .box-bottom .box-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.box-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-back{
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    font-size: large;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    cursor: pointer;
+    transition: all 500ms ease-in-out
 }
