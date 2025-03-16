@@ -142,3 +142,13 @@ section{
     cursor: pointer;
     transition: all 500ms ease-in-out
 }
+@media(max-width: 900px){
+    .card-close{
+        position: fixed;
+        width: 370px;
+        height: 150px;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+}
