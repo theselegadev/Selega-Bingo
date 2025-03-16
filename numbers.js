@@ -18,15 +18,18 @@ btn_draw.addEventListener('click',()=>{
         localStorage.setItem('acabou',true)
         if(localStorage.getItem('acabou')){
             card_close.style.top = "40%"
+            btn_draw.style.display = "none"
         }
     }
 })
 
 window.addEventListener('DOMContentLoaded',()=>{
+    btn_draw.style.display = "block"
     show.innerText = `${list.list[index]}`
     list_numbers(list.list,Number(index)+1,document.getElementById('container'))
     if(localStorage.getItem('acabou')){
         card_close.style.top = "40%"
+        btn_draw.style.display = "none"
     }
 })
 
