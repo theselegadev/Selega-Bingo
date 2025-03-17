@@ -11,7 +11,7 @@ let index = localStorage.getItem('positionnumber')
 btn_draw.addEventListener('click',()=>{
     index++
     localStorage.setItem('positionnumber',index)
-    if(index != list.list.length -1 || index < list.list.length -1){
+    if(index <= list.list.length -1){
         show.innerText = `${list.list[index]}`
         document.getElementById('container').innerHTML += `<p>${list.list[index]}, </p>`
     }else{
